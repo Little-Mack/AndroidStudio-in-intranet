@@ -1,0 +1,34 @@
+apply plugin: NexusRepository
+// Изменяем настройки settings.gradle
+class NexusRepository implements Plugin<Gradle> {
+
+    void apply(Gradle gradle) {
+        gradle.settingsEvaluated { settings ->
+            // Добавляем репозиторий для плагинов
+            settings.pluginManagement {
+                repositories {
+                    maven {
+                        url 'http://My_IP_or_Domain_Name:8081/repository/maven-public/'
+                        // Разрешаем использование http
+                        allowInsecureProtocol = true
+                    }
+                }
+            }
+            settings.dependencyResolutionManagement {
+                // Режим использования репозитория объявленного в проекте, при этом игнорируя репозитории в settings.gradle
+                repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)   
+            }
+        }
+    }
+}
+// Добавляем репозиторий для проекта
+allprojects {
+    ext.RepoConfig = {
+        maven {
+            url 'http://My_IP_or_Domain_Name:8081/repository/maven-public/'
+            allowInsecureProtocol = true
+        }
+    }
+    buildscript.repositories RepoConfig
+    repositories RepoConfig
+}
