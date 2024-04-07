@@ -16,7 +16,7 @@ ___
 
 Устанавливаем Android Studio с настройками по умолчанию и запускаем.
 
-![img](https://i.yapx.ru/XToRn.jpg)
+[![img](https://i.yapx.ru/XToRn.jpg)](https://i.yapx.ru/XToRn.jpg)
 
 More Actions -> SDK Manager ->  SDK Platforms
 
