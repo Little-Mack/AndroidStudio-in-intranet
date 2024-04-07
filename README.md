@@ -18,7 +18,7 @@ ___
 
 <a href="https://i.yapx.ru/XToRn.jpg" target="_blank"><img src="https://i.yapx.ru/XToRn.jpg" alt="img"></a>
 
-[![img](https://i.yapx.ru/XToRn.jpg)](https://i.yapx.ru/XToRn.jpg)
+[![img](https://i.yapx.ru/XToRn.jpg?raw = true)](https://i.yapx.ru/XToRn.jpg)
 
 More Actions -> SDK Manager ->  SDK Platforms
 
