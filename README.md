@@ -97,7 +97,7 @@ ___
 #### Порядок действий
 1. Запустите [RunAsAdmin]AddVariablesAndCopyFiles.cmd с правами администратора
 2. Установите Java JDK с опцией Set JAVA_HOME
-[![img](assets/Install-AndroidStudio.jpg)](assets/Install-AndroidStudio.jpg)
+[![img](assets/JDK-set-Java_Home.jpg)](assets/JDK-set-Java_Home.jpg)
 3. Перезагрузите рабочее место
 4. Установите Android Studio
 
