@@ -1,15 +1,34 @@
 # Инструкция по установке и настройке Android Studio в изолированной сети
+## Оглавление
+- [Инструкция по установке и настройке Android Studio в изолированной сети](#инструкция-по-установке-и-настройке-android-studio-в-изолированной-сети)
+    - [Требования для успешной настройки](#требования-для-успешной-настройки)
+    - [Настройки Nexus Repository](#настройки-nexus-repository)
+    - [Подготовка к развертыванию](#подготовка-к-развертыванию)
+    - [Настройка скриптов](#настройка-скриптов)
+    - [Настройка рабочих мест](#настройка-рабочих-мест)
+      - [Порядок действий](#порядок-действий)
+___
 Для организации работы будет использоваться [Nexus Repository](https://help.sonatype.com/en/download.html#related-links) с проксированием Maven репозиториев.  
-### Требования для успешной настройки:
+### Требования для успешной настройки
 1. Скачать последнюю версию Gradle (_**Binary-only**_): [Download](https://gradle.org/releases)
 2. Скачать последнюю версию Android Studio: [Download](https://developer.android.com/studio)
 3. Скачать Java JDK: [Download](https://adoptium.net)
 4. Скачать KeyStore Explorer: [Download](https://keystore-explorer.org/downloads.html)
 ___
-### Оглавление
-1. [Подготовка к развертыванию](#подготовка-к-развертыванию)
-2. [Настройка скриптов](#настройка-скриптов)
-3. [Настройка рабочих мест](#настройка-рабочих-мест)
+### Настройки Nexus Repository
+В Nexus Repository необходимо добавить следующее репозитории:
+
+|Name|Remote storage|Type|Member repositories|
+|:-|:-|:-|:-|
+|fabric|https://maven.fabric.io/public/|maven2 (proxy)|
+|google|https://dl.google.com/dl/android/maven2/|maven2 (proxy)|
+|gradle-plugin|https://plugins.gradle.org/m2/|maven2 (proxy)|
+|jcenter|https://jcenter.bintray.com/|maven2 (proxy)|
+|maven-apache|https://repo.maven.apache.org/maven2/|maven2 (proxy)|
+|maven-central|https://repo1.maven.org/maven2/|maven2 (proxy)|
+|maven-public||maven2 (group)|fabric, google, gradle-plugin, jcenter, maven-apache, maven-central|
+
+Для подключения Nexus Repository используйте адрес maven-public.
 ___
 ### Подготовка к развертыванию
 Для подготовки файлов понадобится компьютер с полным доступом в интернет.
