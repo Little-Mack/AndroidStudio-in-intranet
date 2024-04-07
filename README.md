@@ -16,19 +16,19 @@ ___
 
 Устанавливаем Android Studio с настройками по умолчанию и запускаем.
 
-![](https://i.yapx.ru/XToRn.jpg)
+![img](https://i.yapx.ru/XToRn.jpg)
 
 More Actions -> SDK Manager ->  SDK Platforms
 
-![](https://i.yapx.ru/XToRq.jpg)
+![img](https://i.yapx.ru/XToRq.jpg)
 
 Отмечаем нужные вам версии SDK или выбираем последнюю.
 
-![](https://i.yapx.ru/XToRM.jpg)
+![img](https://i.yapx.ru/XToRM.jpg)
 
 More Actions -> SDK Manager ->  SDK Tools
 
-![](https://i.yapx.ru/XToRR.jpg)
+![img](https://i.yapx.ru/XToRR.jpg)
 
 Отмечаем следующие пункты:
 
@@ -42,13 +42,13 @@ More Actions -> SDK Manager ->  SDK Tools
 
 More Actions -> SDK Manager ->  Virtual Device Manager
 
-![](https://i.yapx.ru/XToRS.jpg)
+![img](https://i.yapx.ru/XToRS.jpg)
 
 Создайте виртуальное устройство.
 
-![](https://i.yapx.ru/XToRU.jpg)
-![](https://i.yapx.ru/XToRW.jpg)
-![](https://i.yapx.ru/XToRX.jpg)
+![img](https://i.yapx.ru/XToRU.jpg)
+![img](https://i.yapx.ru/XToRW.jpg)
+![img](https://i.yapx.ru/XToRX.jpg)
 ___
 ### Настройка скриптов
 Gradle - программа для сборки проектов (и не только). По умолчанию Android Studio располагает его в %USERNAME%\\.gradle. Сделаем этот каталог общим для всех пользователей с помощью системных переменных.
@@ -67,7 +67,7 @@ Gradle - программа для сборки проектов (и не тол
 
 По умолчанию скрипт создает папку C:\AndroidSettings и копирует в нее необходимые файлы. Перед запуском скрипта, измените каталог если это необходимо. 
 
-![](https://i.yapx.ru/XTogD.jpg)
+![img](https://i.yapx.ru/XTogD.jpg)
 
 Скрипт необходимо запустить с **правами администратора**.
 
@@ -77,8 +77,8 @@ Gradle - программа для сборки проектов (и не тол
   
 В каждом из них вам нужно изменить URL-адрес на адрес вашего Nexus Repository.
 
-![](https://i.yapx.ru/XToqN.jpg)
-![](https://i.yapx.ru/XToqK.jpg)
+![img](https://i.yapx.ru/XToqN.jpg)
+![img](https://i.yapx.ru/XToqK.jpg)
 ___
  ### Настройка рабочих мест
  Создайте сетевую папку или каталог на внешнем носителе и скопируйте в нее следующие каталоги/файлы:
@@ -92,26 +92,26 @@ ___
  * KeyStore Explorer (Platform All)
  * Java JDK
 
-![](https://i.yapx.ru/XTvO0.jpg)
+![img](https://i.yapx.ru/XTvO0.jpg)
 
 #### Порядок действий
 1. Запустите [RunAsAdmin]AddVariablesAndCopyFiles.cmd с правами администратора
 2. Установите Java JDK с опцией Set JAVA_HOME
-![](https://i.yapx.ru/XToRZ.jpg)
+![img](https://i.yapx.ru/XToRZ.jpg)
 3. Перезагрузите рабочее место
 4. Установите Android Studio
 
 Для работы через прокси-сервер по протоколу https нужно сделать сертификат доверенным для java, для этого: 
 1. Запустите KeyStore Explorer с правами администратора
 2. Нажмите Open an existing KeyStore
-![](https://i.yapx.ru/XToRc.jpg)
+![img](https://i.yapx.ru/XToRc.jpg)
 3. Перейдите в C:\Program Files\Android\Android Studio\jbr\lib\security
-![](https://i.yapx.ru/XToRd.jpg)
+![img](https://i.yapx.ru/XToRd.jpg)
 4. Откройте cacerts (пароль по умолчанию: changeit)
-![](https://i.yapx.ru/XToRe.jpg)
+![img](https://i.yapx.ru/XToRe.jpg)
 5. Импортируйте сертификат и сохраните изменения (программа потребует смены пароля, можно ввести тот же)
-![](https://i.yapx.ru/XToRg.jpg)
+![img](https://i.yapx.ru/XToRg.jpg)
 
 В настройках Android Studio пропишите прокси-сервер и добавьте в исключения адрес Nexus Repository.
 
-![](https://i.yapx.ru/XToRj.jpg)
+![img](https://i.yapx.ru/XToRj.jpg)
