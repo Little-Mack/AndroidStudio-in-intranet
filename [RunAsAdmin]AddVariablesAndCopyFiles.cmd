@@ -3,10 +3,10 @@ REM Путь до папки в которую будут скопированы
 set pathAndroidStudio=C:\AndroidSettings\
 
 REM Копируем папки\файлы на диск C:\
-robocopy %~dp0.android %pathAndroidStudio%.android\ /tbd /mt:16 /z /compress /mir
-robocopy %~dp0Sdk %pathAndroidStudio%Sdk\ /tbd /mt:16 /z /compress /mir
-robocopy %~dp0Gradle %pathAndroidStudio%Gradle\ /tbd /mt:16 /z /compress /mir
-robocopy %~dp0init.d %pathAndroidStudio%Gradle\init.d\ /tbd /mt:16 /z /compress /mir
+robocopy %~dp0.android %pathAndroidStudio%.android\ /tbd /mt:16 /z /mir
+robocopy %~dp0Sdk %pathAndroidStudio%Sdk\ /tbd /mt:16 /z /mir
+robocopy %~dp0Gradle %pathAndroidStudio%Gradle\ /tbd /mt:16 /z /mir
+robocopy %~dp0init.d %pathAndroidStudio%Gradle\init.d\ /tbd /mt:16 /z /mir
 
 REM Прописываем переменные в систему
 pushd "%~dp0" 
