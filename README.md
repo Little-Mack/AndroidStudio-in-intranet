@@ -97,19 +97,28 @@ ___
 #### Порядок действий
 1. Запустите [RunAsAdmin]AddVariablesAndCopyFiles.cmd с правами администратора
 2. Установите Java JDK с опцией Set JAVA_HOME
+
 [![img](assets/JDK-set-Java_Home.jpg)](assets/JDK-set-Java_Home.jpg)
+
 3. Перезагрузите рабочее место
 4. Установите Android Studio
 
 Для работы через прокси-сервер по протоколу https нужно сделать сертификат доверенным для java, для этого: 
 1. Запустите KeyStore Explorer с правами администратора
 2. Нажмите Open an existing KeyStore
+
 [![img](assets/KeyStore-open.jpg)](assets/KeyStore-open.jpg)
+
 3. Перейдите в C:\Program Files\Android\Android Studio\jbr\lib\security
+
 [![img](assets/KeyStore-search-cacerts.jpg)](assets/KeyStore-search-cacerts.jpg)
+
 4. Откройте cacerts (пароль по умолчанию: changeit)
+
 [![img](assets/KeyStore-input-password.jpg)](assets/KeyStore-input-password.jpg)
+
 5. Импортируйте сертификат и сохраните изменения (программа потребует смены пароля, можно ввести тот же)
+
 [![img](assets/KeyStore-import-sert.jpg)](assets/KeyStore-import-sert.jpg)
 
 В настройках Android Studio пропишите прокси-сервер и добавьте в исключения адрес Nexus Repository.
