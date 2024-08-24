@@ -9,12 +9,12 @@
     - [Настройка рабочих мест](#настройка-рабочих-мест)
       - [Порядок действий](#порядок-действий)
 ___
-Для организации работы будет использоваться [Nexus Repository](https://help.sonatype.com/en/download.html#related-links) с проксированием Maven репозиториев.  
+Для организации работы будет использоваться [Nexus Repository](https://help.sonatype.com/en/download.html) с проксированием Maven репозиториев.  
 ### Требования для успешной настройки
 1. Скачать последнюю версию Gradle (_**Binary-only**_): [Download](https://gradle.org/releases)
 2. Скачать последнюю версию Android Studio: [Download](https://developer.android.com/studio)
-3. Скачать Java JDK: [Download](https://adoptium.net)
-4. Скачать KeyStore Explorer: [Download](https://keystore-explorer.org/downloads.html)
+3. Скачать Java JDK: [Download](https://adoptium.net/temurin/releases/?os=windows&package=jdk)
+4. Скачать KeyStore Explorer (Platform All): [Download](https://keystore-explorer.org/downloads.html)
 ___
 ### Настройки Nexus Repository
 В Nexus Repository необходимо добавить следующее репозитории:
@@ -56,7 +56,6 @@ More Actions -> SDK Manager ->  SDK Tools
 * Android Emulator
 * Android Emulator hypervisor driver
 * Android SDK Platform-Tools
-* Intel x86 Emulator Accelerator (для процессоров Intel)
 
 Примените изменения и установите требуемые компоненты.
 
@@ -81,8 +80,6 @@ Gradle - программа для сборки проектов (и не тол
 
 .android и Sdk будут необходимы для дальнейшей настройки рабочих мест. 
 
-Для автоматизированной записи переменных будем использовать утилиту setenv.exe
-
 [RunAsAdmin]AddVariablesAndCopyFiles.cmd - скрипт для автоматического копирования .android, Sdk, Gradle и скриптов инициализации init.d на рабочее место и записи переменных в систему. 
 
 По умолчанию скрипт создает папку C:\AndroidSettings и копирует в нее необходимые файлы. Перед запуском скрипта, измените каталог если это необходимо. 
@@ -91,7 +88,7 @@ Gradle - программа для сборки проектов (и не тол
 
 Скрипт необходимо запустить с **правами администратора**.
 
-Для добавления локального Nexus Repository в качестве репозитория артефактов в Android Studio используются скрипты инициализации в каталоге init.d:
+Для добавления локального Nexus Repository в качестве репозитория артефактов в Android Studio используются [скрипты инициализации](https://docs.gradle.org/current/userguide/init_scripts.html) в каталоге init.d:
 * init.gradle (для Groovy DSL)
 * init.gradle.kts (для Kotlin DSL)
   
@@ -106,9 +103,8 @@ ___
  * Распакованный каталог Gradle **(переименуйте каталог из gradle-8.\* в Gradle)**
  * Каталог init.d
  * Каталог Sdk (Расположен в %LOCALAPPDATA%\Android)
- * Каталог setenv
  * Скрипт [RunAsAdmin]AddVariablesAndCopyFiles.cmd
- * android-studio.exe
+ * android-studio-installer.exe
  * KeyStore Explorer (Platform All)
  * Java JDK
 
